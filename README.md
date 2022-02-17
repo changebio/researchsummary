@@ -1,5 +1,16 @@
-# nbdev template
+# Summary of my research projects
+> Track record of daily research.
 
-Use this template to more easily create your [nbdev](https://nbdev.fast.ai/) project.
 
-_If you are using an older version of this template, and want to upgrade to the theme-based version, see [this helper script](https://gist.github.com/hamelsmu/977e82a23dcd8dcff9058079cb4a8f18) (more explanation of what this means is contained in the link to the script)_.
+## List of working on projects
+
+- 1. SEQLinkage 
+    - https://github.com/changebio/SEQLinkage
+- 2. Cstatgen 
+    - https://github.com/changebio/cstatgen
+- 3. LDtools 
+    - https://github.com/changebio/LDtools 
+    - https://github.com/changebio/bioworkflows
+    - https://github.com/changebio/bioworkflows
+- 4. Alzheimers-family
+    - https://github.com/changebio/alzheimers-family
