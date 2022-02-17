@@ -10,7 +10,7 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: Weekly Discussion Thursday 3pm
+      title: Weekly Discussion
       url: weekly.html
     - output: web,pdf
       title: Summary of SEQLinkage

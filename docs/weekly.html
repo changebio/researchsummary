@@ -1,6 +1,6 @@
 ---
 
-title: Weekly Discussion Thursday 3pm
+title: Weekly Discussion
 
 
 keywords: fastai
@@ -31,7 +31,26 @@ nb_path: "nbs/00_weekly.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="02/17/2022">02/17/2022<a class="anchor-link" href="#02/17/2022"> </a></h2><h3 id="1.-The-format-of-daily-PR">1. The format of daily PR<a class="anchor-link" href="#1.-The-format-of-daily-PR"> </a></h3><h3 id="2.-SEQLinkage">2. SEQLinkage<a class="anchor-link" href="#2.-SEQLinkage"> </a></h3>
+<h2 id="02/17/2022">02/17/2022<a class="anchor-link" href="#02/17/2022"> </a></h2><h3 id="1.-The-format-of-daily-PR">1. The format of daily PR<a class="anchor-link" href="#1.-The-format-of-daily-PR"> </a></h3><ul>
+<li><a href="https://changebio.github.io/researchsummary/">https://changebio.github.io/researchsummary/</a></li>
+</ul>
+<h3 id="2.-SEQLinkage">2. SEQLinkage<a class="anchor-link" href="#2.-SEQLinkage"> </a></h3><h4 id="Progress">Progress<a class="anchor-link" href="#Progress"> </a></h4><ul>
+<li>Implement get AF from annotation.</li>
+<li>Fix maf bug by reverse genotype if maf &gt; 0.5. <a href="https://github.com/gaow/SEQLinkage/issues/33">A potential problem with calculating marker frequencies.</a></li>
+<li>Fix output format and path bugs.</li>
+<li>Update the command line script.</li>
+<li>Running likange analysis on chr22</li>
+</ul>
+<hr>
+<ul>
+<li>Yu's data. VCF_QC has been done. Telled her the path of the data</li>
+</ul>
+<h4 id="Questions-and-Issues">Questions and Issues<a class="anchor-link" href="#Questions-and-Issues"> </a></h4><ul>
+<li>1.<a href="https://github.com/gaow/SEQLinkage/issues/34">the vcf file and the annotation file don't match</a></li>
+<li>2.missing freq or 0 freq are assigned a MAF of (1-k)/2n. k is the fraction of singletons observed (need clarify)</li>
+<li>3.Do we need to do VCF QC for the family data?</li>
+</ul>
+
 </div>
 </div>
 </div>
