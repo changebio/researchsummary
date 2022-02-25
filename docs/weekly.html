@@ -31,6 +31,24 @@ nb_path: "nbs/00_weekly.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="To-Do-List-[&#10003;]">To Do List [&#10003;]<a class="anchor-link" href="#To-Do-List-[&#10003;]"> </a></h2><ul>
+<li>Run linkage analysis by paramlink2 on chr21</li>
+<li>Optimize parallelization to speed up write linkage files (10 &gt;&gt; 3.5)</li>
+<li>Optimize the format and storage of intermediate data (pickle).</li>
+</ul>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="03/03/2022">03/03/2022<a class="anchor-link" href="#03/03/2022"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="02/24/2022">02/24/2022<a class="anchor-link" href="#02/24/2022"> </a></h2><h4 id="Progress">Progress<a class="anchor-link" href="#Progress"> </a></h4><h5 id="SEQLinkage">SEQLinkage<a class="anchor-link" href="#SEQLinkage"> </a></h5><p>update multiple processing to speed up write linkage files  360 genes and 500 families using 10 hours to write as linkage (I/O bound problem)</p>
 <p>Take a look at Pseudomarker</p>
 <ul>
@@ -51,19 +69,22 @@ nb_path: "nbs/00_weekly.ipynb"
 <blockquote><p>Check VCF QC
 <a href="http://mbontrager.org/blog/2016/08/17/Variant-Exploration">http://mbontrager.org/blog/2016/08/17/Variant-Exploration</a>
 test on chr9 and chr22</p>
+</blockquote>
 
 <pre><code>sos run ./pipeline/VCF_QC.ipynb qc    --genoFile /home/yh3455/Github/xqtl-pipeline/ADSP_WES_geno_list1.txt    --dbsnp-variants /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/00-All.add_chr.variants.gz  --reference-genome /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/GRCh38_full_analysis_set_plus_decoy_hla.noALT_noHLA_noDecoy_ERCC.fasta   --DP-snp 2 --DP-indel 2 --cwd /home/yh3455/Github/linkage/SEQpy3/data/genotype_all_dp2_test --container /home/yh3455/Github/xqtl-pipeline/container/sifs/bioinfo.sif -J 22 --numThreads 10 --mem 128</code></pre>
 <p>removing <code>bcftools filter -i 'GT="hom" | TYPE="snp" &amp; GT="het" &amp; (FORMAT/AD[*:1])/(FORMAT/AD[*:0] + FORMAT/AD[*:1]) &gt;= ${AB_snp} | TYPE="indel" &amp; GT="het" &amp; (FORMAT/AD[*:1])/(FORMAT/AD[*:0] + FORMAT/AD[*:1]) &gt;= ${AB_indel}'</code></p>
 <ul>
 <li>174325 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.leftnorm.filtered.vcf.gz</li>
 </ul>
-</blockquote>
 <p>removing <code>bcftools filter -i 'GT="hom" | TYPE="snp" &amp; GT="het" &amp; (FORMAT/AD[*:1])/(FORMAT/AD[*:0] + FORMAT/AD[*:1]) &gt;= ${AB_snp} | TYPE="indel" &amp; GT="het" &amp; (FORMAT/AD[*:1])/(FORMAT/AD[*:0] + FORMAT/AD[*:1]) &gt;= ${AB_indel}' | \
  bcftools filter -i 'F_MISSING&lt;${geno_filter} &amp; HWE&gt;${hwe_filter}'</code></p>
 <ul>
 <li>277375 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.leftnorm.filtered.vcf.gz
 #### Questions and Issues</li>
 </ul>
+<ol>
+<li>What is the difference between merlin and mlink?</li>
+</ol>
 <hr>
 
 </div>
