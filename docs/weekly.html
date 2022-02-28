@@ -32,7 +32,16 @@ nb_path: "nbs/00_weekly.ipynb"
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="To-Do-List-[&#10003;]">To Do List [&#10003;]<a class="anchor-link" href="#To-Do-List-[&#10003;]"> </a></h2><ul>
-<li>Run linkage analysis by paramlink2 on chr21</li>
+<li>vcf data checking (why so many recombinations in some genes: vcf qc issue? or lander-green algorithm</li>
+<li>run linkage analysis by paramlink2 on chr19 (APOE genes)</li>
+<li>common variant linkage analysis (snp-based, gene-based)</li>
+<li>verify results by previous studies (APOE gene?)</li>
+</ul>
+<p>===</p>
+<ul>
+<li>Calculating marker frequency is not right under <code>--bin=0</code>. cmaf_by_size</li>
+<li>lander-green algorithm is for big region and low density markers</li>
+<li>How to handle multiple markers in one locus in linkage analysis (paramlink2)</li>
 <li>Optimize parallelization to speed up write linkage files (10 &gt;&gt; 3.5)</li>
 <li>Optimize the format and storage of intermediate data (pickle).</li>
 </ul>
@@ -43,7 +52,9 @@ nb_path: "nbs/00_weekly.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="03/03/2022">03/03/2022<a class="anchor-link" href="#03/03/2022"> </a></h2>
+<h2 id="03/03/2022">03/03/2022<a class="anchor-link" href="#03/03/2022"> </a></h2><p>merlin model parameter
+AD 0.001   0.01,0.90,0.90 Dominant_Model</p>
+
 </div>
 </div>
 </div>
