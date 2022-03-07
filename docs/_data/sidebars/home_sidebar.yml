@@ -18,6 +18,9 @@ entries:
     - output: web,pdf
       title: Summary of LDtools
       url: ldtools.html
+    - output: web,pdf
+      title: Title
+      url: containerization_hpc.html
     output: web
     title: researchsummary
   output: web
