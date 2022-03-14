@@ -19,7 +19,10 @@ entries:
       title: Summary of LDtools
       url: ldtools.html
     - output: web,pdf
-      title: Title
+      title: Conda envs
+      url: conda_envs.html
+    - output: web,pdf
+      title: Docker and Singularity
       url: containerization_hpc.html
     output: web
     title: researchsummary

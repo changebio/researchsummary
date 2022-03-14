@@ -4,6 +4,7 @@
     "Weekly Discussion": "weekly.html",
     "Summary of SEQLinkage": "seqlinkage.html",
     "Summary of LDtools": "ldtools.html",
-    "Title": "containerization_hpc.html"
+    "Conda envs": "conda_envs.html",
+    "Docker and Singularity": "containerization_hpc.html"
   }
 }
