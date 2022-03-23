@@ -188,6 +188,23 @@ python setup.py install
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Singularity-pull-docker-image">Singularity pull docker image<a class="anchor-link" href="#Singularity-pull-docker-image"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<pre><code>module load Singularity
+singularity remote login
+&gt; enter your token
+singularity build --remote lmm.sif docker://statisticalgenetics/lmm:3.0</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="References">References<a class="anchor-link" href="#References"> </a></h2><p>Using docker
 <a href="https://docs.docker.com/engine/reference/commandline/docker/">https://docs.docker.com/engine/reference/commandline/docker/</a>  &gt;&gt;&gt; docker
 <a href="https://docs.docker.com/engine/reference/commandline/container/">https://docs.docker.com/engine/reference/commandline/container/</a> &gt;&gt;&gt; container</p>
