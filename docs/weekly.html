@@ -35,7 +35,7 @@ nb_path: "nbs/00_weekly.ipynb"
 <li>Create pseudomarker input and test pseudomarker</li>
 <li>Build seqlink and paramlink2 sos pipeline for linkage analysis</li>
 <li>Run linakge analysis on all chromosomes</li>
-<li>verify results by previous studies (APOE gene?)</li>
+<li>verify results by previous studies (A list of genes or variants?)</li>
 <li>Run linakge analysis on chromosomes</li>
 </ul>
 <p>===</p>
@@ -54,17 +54,23 @@ nb_path: "nbs/00_weekly.ipynb"
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="03/23/2022">03/23/2022<a class="anchor-link" href="#03/23/2022"> </a></h2><ul>
+<li>Build seqlink and paramlink2 sos pipeline for linkage analysis</li>
+<li>Run linakge analysis on all chromosomes<ul>
+<li>the results are promising (maybe still need to control type I errors)</li>
+<li>most of the significant variants (LOD&gt;3) are rare variants.</li>
+<li>Using pseudomarker to do further analysis for variants with lod&gt;3?(twostage.py)</li>
+<li>Verify results by previous studies (A list of genes or variants?)</li>
+</ul>
+</li>
 <li>Create pseudomarker input and test pseudomarker<ul>
 <li>cannot handle mendelian errors in CHP markers (<a href="https://github.com/gaow/SEQLinkage/issues/41">https://github.com/gaow/SEQLinkage/issues/41</a>)
   The reason is that recombination is setted as False to generate CHP markers.</li>
 <li>about 5 min per variant</li>
 </ul>
 </li>
-<li>Build seqlink and paramlink2 sos pipeline for linkage analysis</li>
-<li>Run linakge analysis on all chromosomes</li>
 </ul>
 <p>Q:</p>
-<p>recombination and CHP markers</p>
+<p>recombination and CHP markers (pseudomarker calculates the likelihood of a marker from all the data joinly)</p>
 
 </div>
 </div>
