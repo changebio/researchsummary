@@ -53,6 +53,34 @@ nb_path: "nbs/00_weekly.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="03/30/2022">03/30/2022<a class="anchor-link" href="#03/30/2022"> </a></h2><ul>
+<li>Maximize the likelihood using grid search method</li>
+<li>Run linakge analysis of common variants on all chromosomes</li>
+<li>Check recombination on gene TPTEP1</li>
+</ul>
+<p>Some thoughts to reduce recombination</p>
+<ol>
+<li>filter common variants before phasing</li>
+<li>filter variants only occurred once in a family (singleton) before phasing</li>
+<li>remove families with recombination more than 3</li>
+</ol>
+<ul>
+<li>TPTEP1<ul>
+<li>989 family: 31 -&gt; 19 -&gt; 3</li>
+<li>&lt;3 recombination 0.49 -&gt; 0.82</li>
+</ul>
+</li>
+</ul>
+<p>Q:
+recombination and CHP markers (pseudomarker calculates the likelihood of a marker from all the data joinly)</p>
+
+<pre><code>- using recombination pattern accross all families </code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="03/23/2022">03/23/2022<a class="anchor-link" href="#03/23/2022"> </a></h2><ul>
 <li>Build seqlink and paramlink2 sos pipeline for linkage analysis</li>
 <li>Run linakge analysis on all chromosomes<ul>
