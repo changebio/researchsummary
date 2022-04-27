@@ -31,22 +31,12 @@ nb_path: "nbs/00_weekly.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="To-Do-List-%5B%E2%9C%93%5D">To Do List [&#10003;]<a class="anchor-link" href="#To-Do-List-%5B%E2%9C%93%5D"> </a></h2><ul>
-<li>Remove family with recombination to analyze CHP marker</li>
-<li>Format CHP output for runPM</li>
-<li>Run CHP by paramlink2 and runPM</li>
-<li>verify results by previous studies (A list of genes or variants?)</li>
-<li>Run linakge analysis on chromosomes</li>
+<h2 id="04/27/2022">04/27/2022<a class="anchor-link" href="#04/27/2022"> </a></h2><ul>
+<li>format vcf to runPM input (chr22; afreq cutoff 0.01) (<a href="https://github.com/changebio/alzheimers-family/blob/master/notebook/20220426_Format_vcf_to_runPM_input.ipynb">https://github.com/changebio/alzheimers-family/blob/master/notebook/20220426_Format_vcf_to_runPM_input.ipynb</a>)</li>
+<li>calculate LODs for different population by plug in allele freq from annotation file (AF, not population AF) (<a href="https://github.com/changebio/alzheimers-family/blob/master/notebook/20220426_Result_summary_R.ipynb">https://github.com/changebio/alzheimers-family/blob/master/notebook/20220426_Result_summary_R.ipynb</a>)</li>
+<li>compare AF between annotation and vcf</li>
+<li>compare the result between paramlink2 and mlink (<a href="https://github.com/changebio/SEQLinkage/blob/master/nbs/paramlink2vsmlink.ipynb">https://github.com/changebio/SEQLinkage/blob/master/nbs/paramlink2vsmlink.ipynb</a>)</li>
 </ul>
-<p>===</p>
-<ul>
-<li>Calculating marker frequency is not right under <code>--bin=0</code>. cmaf_by_size</li>
-<li>lander-green algorithm is for big region and low density markers</li>
-<li>How to handle multiple markers in one locus in linkage analysis (paramlink2)</li>
-<li>Optimize parallelization to speed up write linkage files (10 &gt;&gt; 3.5)</li>
-<li>Optimize the format and storage of intermediate data (pickle).</li>
-</ul>
-<hr>
 
 </div>
 </div>
