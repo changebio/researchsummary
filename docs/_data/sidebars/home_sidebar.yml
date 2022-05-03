@@ -14,7 +14,7 @@ entries:
       url: weekly.html
     - output: web,pdf
       title: Summary of SEQLinkage
-      url: seqlinkage.html
+      url: linkage.html
     - output: web,pdf
       title: Summary of LDtools
       url: ldtools.html
