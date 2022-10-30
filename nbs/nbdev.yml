@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "researchsummary"
+  site-url: "https://changebio.github.io/researchsummary/"
+  description: "Summary of my research projects and track record of my daily research"
+  repo-branch: main
+  repo-url: "https://github.com/changebio/researchsummary/tree/main/"
