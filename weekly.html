@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Summary about the progress and issues in the week">
+
+<title>researchsummary - Weekly Discussion</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="researchsummary - Weekly Discussion">
+<meta property="og:description" content="Summary about the progress and issues in the week">
+<meta property="og:site-name" content="researchsummary">
+<meta name="twitter:title" content="researchsummary - Weekly Discussion">
+<meta name="twitter:description" content="Summary about the progress and issues in the week">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">researchsummary</span>
+    </a>
+  </div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Weekly Discussion</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Summary of my research projects</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weekly.html" class="sidebar-item-text sidebar-link active">Weekly Discussion</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linkage.html" class="sidebar-item-text sidebar-link">Summary of SEQLinkage</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ldtools.html" class="sidebar-item-text sidebar-link">Summary of LDtools</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conda_envs.html" class="sidebar-item-text sidebar-link">Conda envs</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./containerization_hpc.html" class="sidebar-item-text sidebar-link">Docker and Singularity</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">05/04/2022</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">04/27/2022</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">04/20/2022</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">04/13/2022</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">04/06/2022</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">03/30/2022</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">03/23/2022</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">03/16/2022</a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">03/09/2022</a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">03/03/2022</a></li>
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">02/24/2022</a></li>
+  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">02/17/2022</a>
+  <ul class="collapse">
+  <li><a href="#the-format-of-daily-pr" id="toc-the-format-of-daily-pr" class="nav-link" data-scroll-target="#the-format-of-daily-pr">1. The format of daily PR</a></li>
+  <li><a href="#seqlinkage-1" id="toc-seqlinkage-1" class="nav-link" data-scroll-target="#seqlinkage-1">2. SEQLinkage</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/changebio/researchsummary/tree/main/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Weekly Discussion</h1>
+</div>
+
+<div>
+  <div class="description">
+    Summary about the progress and issues in the week
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">05/04/2022</h2>
+<ul>
+<li>Calculate LOD score under a range of afreq</li>
+<li>runPM on top HLOD variants</li>
+</ul>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">04/27/2022</h2>
+<ul>
+<li>format vcf to runPM input (chr22; afreq cutoff 0.01) (https://github.com/changebio/alzheimers-family/blob/master/notebook/20220426_Format_vcf_to_runPM_input.ipynb)</li>
+<li>calculate LODs for different population by plug in allele freq from annotation file (AF, not population AF) (https://github.com/changebio/alzheimers-family/blob/master/notebook/20220426_Result_summary_R.ipynb)</li>
+<li>compare AF between annotation and vcf</li>
+<li>compare the result between paramlink2 and mlink (https://github.com/changebio/SEQLinkage/blob/master/nbs/paramlink2vsmlink.ipynb)</li>
+</ul>
+<p>=== - The manhattan plots of different population with afreq=0.5 - The informative families and allele freq in HLOD result - The founder percentage in different population - How paramlink2 break loops? - Read rvnpl papers</p>
+</section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">04/20/2022</h2>
+<ul>
+<li>genome wide linkage analysis</li>
+<li>format genotype data</li>
+<li>plug in allele freq from annotation file</li>
+<li>calculate LODs for different population</li>
+</ul>
+</section>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3">04/13/2022</h2>
+<ul>
+<li>Format CHP output for runPM</li>
+<li>Test runPM</li>
+<li>linkage heterogeneity
+<ul>
+<li>The number of significant variants increases.</li>
+</ul></li>
+<li>linkage analysis without haplotype imputation</li>
+</ul>
+</section>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4">04/06/2022</h2>
+<ul>
+<li>Format CHP output for runPM</li>
+<li>Test runPM</li>
+<li>Maximize the likelihood using grid search method</li>
+<li>Run linakge analysis of common variants on all chromosomes</li>
+</ul>
+</section>
+<section id="section-5" class="level2">
+<h2 class="anchored" data-anchor-id="section-5">03/30/2022</h2>
+<ul>
+<li>Maximize the likelihood using grid search method</li>
+<li>Run linakge analysis of common variants on all chromosomes</li>
+<li>Check recombination on gene TPTEP1</li>
+</ul>
+<p>Some thoughts to reduce recombination 1. filter common variants before phasing 2. filter variants only occurred once in a family (singleton) before phasing 3. remove families with recombination more than 3</p>
+<ul>
+<li>TPTEP1
+<ul>
+<li>989 family: 31 -&gt; 19 -&gt; 3</li>
+<li>&lt;3 recombination 0.49 -&gt; 0.82</li>
+</ul></li>
+</ul>
+<p>Q: recombination and CHP markers (pseudomarker calculates the likelihood of a marker from all the data joinly)</p>
+<pre><code>- using recombination pattern accross all families </code></pre>
+</section>
+<section id="section-6" class="level2">
+<h2 class="anchored" data-anchor-id="section-6">03/23/2022</h2>
+<ul>
+<li>Build seqlink and paramlink2 sos pipeline for linkage analysis</li>
+<li>Run linakge analysis on all chromosomes
+<ul>
+<li>the results are promising (maybe still need to control type I errors)</li>
+<li>most of the significant variants (LOD&gt;3) are rare variants.</li>
+<li>Using pseudomarker to do further analysis for variants with lod&gt;3?(twostage.py)</li>
+<li>Verify results by previous studies (A list of genes or variants?)</li>
+</ul></li>
+<li>Create pseudomarker input and test pseudomarker
+<ul>
+<li>cannot handle mendelian errors in CHP markers (https://github.com/gaow/SEQLinkage/issues/41) The reason is that recombination is setted as False to generate CHP markers.</li>
+<li>about 5 min per variant</li>
+</ul></li>
+</ul>
+<p>Q:</p>
+<p>recombination and CHP markers (pseudomarker calculates the likelihood of a marker from all the data joinly)</p>
+</section>
+<section id="section-7" class="level2">
+<h2 class="anchored" data-anchor-id="section-7">03/16/2022</h2>
+<ul>
+<li>Update multiprocessing to output the intermediate data
+<ul>
+<li>qsub task killed (too many jobs or not enough memory?)</li>
+</ul></li>
+<li>Build rpy2 pipeline for linkage analysis</li>
+<li>Run linakge analysis on chromosomes</li>
+<li>Remove unused parameters and codes in cstatgen.</li>
+</ul>
+<p>=== - Fimpute https://animalbiosciences.uoguelph.ca/~msargol/fimpute/</p>
+<p>Questions: - Using sos to run seqlink - jobs - for_each - memory for each job or total</p>
+<ul>
+<li>log odds pvalue distribution</li>
+</ul>
+</section>
+<section id="section-8" class="level2">
+<h2 class="anchored" data-anchor-id="section-8">03/09/2022</h2>
+<p>run linkage analysis by paramlink2 on chr19 (APOE genes)</p>
+<p>comparing lods under different dfreq and other model parameters (merlin model parameter AD 0.001 0.01,0.90,0.90 Dominant_Model)</p>
+<p>generate a pipeline to analysis multiple genes</p>
+<p>===</p>
+<p>plink vs plink2</p>
+<p>common variants</p>
+</section>
+<section id="section-9" class="level2">
+<h2 class="anchored" data-anchor-id="section-9">03/03/2022</h2>
+<p>merlin model parameter AD 0.001 0.01,0.90,0.90 Dominant_Model - 1.<a href="https://github.com/gaow/SEQLinkage/issues/38">Is it reasonable to use marker freq as the population frequency of the disease allele?</a> - 2.<a href="https://github.com/gaow/SEQLinkage/issues/39">How to integrate lods from different markers and in different families in the same gene?</a> - 3.What is the cutoff of lod? Do we need to do adjust the threshold?</p>
+<p>Why VCF QC is necessary? The variant number is kind of the same as Yu’s vcf.(need to do DP and GQ filtering) <code>/mnt/mfs/statgen/alzheimers-family/normalized_bed</code> The variants are too dense to use lander-green algorithm.</p>
+<p>The vcf file I used only has GT information in it.</p>
+<p>How the vcf I used is matched with Yu’s vcf?</p>
+</section>
+<section id="section-10" class="level2">
+<h2 class="anchored" data-anchor-id="section-10">02/24/2022</h2>
+<section id="progress" class="level4">
+<h4 class="anchored" data-anchor-id="progress">Progress</h4>
+<section id="seqlinkage" class="level5">
+<h5 class="anchored" data-anchor-id="seqlinkage">SEQLinkage</h5>
+<p>update multiple processing to speed up write linkage files 360 genes and 500 families using 10 hours to write as linkage (I/O bound problem)</p>
+<p>Take a look at Pseudomarker - https://www.jurgott.org/linkage/runPM.html - https://www.mv.helsinki.fi/home/tsjuntun/pseudomarker/download.html - https://www.ncbi.nlm.nih.gov/CBBresearch/Schaffer/fastlink.html</p>
+<p>Only input and output file without run-linkage</p>
+</section>
+<section id="vcf_qc" class="level5">
+<h5 class="anchored" data-anchor-id="vcf_qc">VCF_QC</h5>
+<p>Double check on the MAF being truly MAF</p>
+<p>Run VCF_QC under DP=2,</p>
+<pre><code>sos run ./pipeline/VCF_QC.ipynb qc    \
+--genoFile /home/yh3455/xqtl-pipeline/ADSP_WES_geno_list.txt    \
+--dbsnp-variants /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/00-All.add_chr.variants.gz  \
+--reference-genome /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/GRCh38_full_analysis_set_plus_decoy_hla.noALT_noHLA_noDecoy_ERCC.fasta   \
+--DP-snp 2 --DP-indel 2 \
+--cwd /home/yh3455/Github/linkage/SEQpy3/data/genotype_all_dp2 --container /home/yh3455/Github/xqtl-pipeline/container/sifs/bioinfo.sif -J 22 --numThreads 10 --mem 128</code></pre>
+<blockquote class="blockquote">
+<p>Check VCF QC http://mbontrager.org/blog/2016/08/17/Variant-Exploration</p>
+</blockquote>
+<p>test on chr9 and chr22</p>
+<pre><code>sos run ./pipeline/VCF_QC.ipynb qc    --genoFile /home/yh3455/Github/xqtl-pipeline/ADSP_WES_geno_list1.txt    --dbsnp-variants /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/00-All.add_chr.variants.gz  --reference-genome /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/GRCh38_full_analysis_set_plus_decoy_hla.noALT_noHLA_noDecoy_ERCC.fasta   --DP-snp 2 --DP-indel 2 --cwd /home/yh3455/Github/linkage/SEQpy3/data/genotype_all_dp2_test --container /home/yh3455/Github/xqtl-pipeline/container/sifs/bioinfo.sif -J 22 --numThreads 10 --mem 128</code></pre>
+<p>removing <code>bcftools filter -i 'GT="hom" | TYPE="snp" &amp; GT="het" &amp; (FORMAT/AD[*:1])/(FORMAT/AD[*:0] + FORMAT/AD[*:1]) &gt;= ${AB_snp} | TYPE="indel" &amp; GT="het" &amp; (FORMAT/AD[*:1])/(FORMAT/AD[*:0] + FORMAT/AD[*:1]) &gt;= ${AB_indel}'</code> * 174325 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.leftnorm.filtered.vcf.gz</p>
+<p>removing <code>bcftools filter -i 'GT="hom" | TYPE="snp" &amp; GT="het" &amp; (FORMAT/AD[*:1])/(FORMAT/AD[*:0] + FORMAT/AD[*:1]) &gt;= ${AB_snp} | TYPE="indel" &amp; GT="het" &amp; (FORMAT/AD[*:1])/(FORMAT/AD[*:0] + FORMAT/AD[*:1]) &gt;= ${AB_indel}' | \  bcftools filter -i 'F_MISSING&lt;${geno_filter} &amp; HWE&gt;${hwe_filter}'</code> * 277375 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.leftnorm.filtered.vcf.gz #### Questions and Issues 1. What is the difference between merlin and mlink?</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="section-11" class="level2">
+<h2 class="anchored" data-anchor-id="section-11">02/17/2022</h2>
+<section id="the-format-of-daily-pr" class="level3">
+<h3 class="anchored" data-anchor-id="the-format-of-daily-pr">1. The format of daily PR</h3>
+<ul>
+<li>https://changebio.github.io/researchsummary/</li>
+</ul>
+</section>
+<section id="seqlinkage-1" class="level3">
+<h3 class="anchored" data-anchor-id="seqlinkage-1">2. SEQLinkage</h3>
+<section id="progress-1" class="level4">
+<h4 class="anchored" data-anchor-id="progress-1">Progress</h4>
+<ul>
+<li>Implement get AF from annotation.</li>
+<li>Fix maf bug by reverse genotype if maf &gt; 0.5. <a href="https://github.com/gaow/SEQLinkage/issues/33">A potential problem with calculating marker frequencies.</a></li>
+<li>Fix output format and path bugs.</li>
+<li>Update the command line script.</li>
+<li>Running likange analysis on chr22</li>
+</ul>
+<p>=== - Yu’s data. VCF_QC has been done. Telled her the path of the data * 170839 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.leftnorm.filtered.bim * 174326 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.leftnorm.filtered.vcf.gz * 368336 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.leftnorm.vcf.gz * 368318 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.vcf.gz</p>
+<pre><code>sos run ./pipeline/VCF_QC.ipynb qc    \
+--genoFile /home/yh3455/xqtl-pipeline/ADSP_WES_geno_list     \
+--dbsnp-variants /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/00-All.add_chr.variants.gz  \
+--reference-genome /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/GRCh38_full_analysis_set_plus_decoy_hla.noALT_noHLA_noDecoy_ERCC.fasta   \
+--cwd /home/yh3455/Github/linkage/SEQpy3/data/genotype_all --container /home/yh3455/Github/xqtl-pipeline/container/sifs/bioinfo.sif -J 22 --numThreads 10 --mem 128</code></pre>
+</section>
+<section id="questions-and-issues" class="level4">
+<h4 class="anchored" data-anchor-id="questions-and-issues">Questions and Issues</h4>
+<ul>
+<li><p>1.<a href="https://github.com/gaow/SEQLinkage/issues/34">the vcf file and the annotation file don’t match</a>. <a href="https://github.com/gaow/SEQLinkage/issues/35">Can we get the variant id by VCFstream?</a> &gt; <em>add a get variant id function in cstatgen</em> &gt; <em>https://github.com/statgenetics/cstatgen/blob/d51a06c18cd340fafe31e9b915ef9a2e49b55987/src/umich/vcf/VcfRecord.h</em></p></li>
+<li><p>2.missing freq or 0 freq are assigned a MAF of (1-k)/2n. k is the fraction of singletons observed (need clarify). https://www.sciencedirect.com/science/article/pii/S0002929719303453 &gt; <em>add a new argument to deal with missing or 0 freq. default is to remove them. user can set an assigned MAF.</em></p></li>
+<li><p>3.Do we need to do VCF QC for the family data? &gt; * == further discussion is needed == *</p></li>
+<li><p>4.<a href="https://github.com/gaow/SEQLinkage/issues/32">Is the line to normalize allele freq to 1?</a></p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="00_weekly_files/figure-html/432171f8-4650-4c0b-94fc-e2a93a989ad0.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Screen Shot 2022-02-17 at 11.32.19 AM.png</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

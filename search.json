@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "weekly.html",
+    "href": "weekly.html",
+    "title": "Weekly Discussion",
+    "section": "",
+    "text": "Calculate LOD score under a range of afreq\nrunPM on top HLOD variants"
+  },
+  {
+    "objectID": "weekly.html#section-1",
+    "href": "weekly.html#section-1",
+    "title": "Weekly Discussion",
+    "section": "04/27/2022",
+    "text": "04/27/2022\n\nformat vcf to runPM input (chr22; afreq cutoff 0.01) (https://github.com/changebio/alzheimers-family/blob/master/notebook/20220426_Format_vcf_to_runPM_input.ipynb)\ncalculate LODs for different population by plug in allele freq from annotation file (AF, not population AF) (https://github.com/changebio/alzheimers-family/blob/master/notebook/20220426_Result_summary_R.ipynb)\ncompare AF between annotation and vcf\ncompare the result between paramlink2 and mlink (https://github.com/changebio/SEQLinkage/blob/master/nbs/paramlink2vsmlink.ipynb)\n\n=== - The manhattan plots of different population with afreq=0.5 - The informative families and allele freq in HLOD result - The founder percentage in different population - How paramlink2 break loops? - Read rvnpl papers"
+  },
+  {
+    "objectID": "weekly.html#section-2",
+    "href": "weekly.html#section-2",
+    "title": "Weekly Discussion",
+    "section": "04/20/2022",
+    "text": "04/20/2022\n\ngenome wide linkage analysis\nformat genotype data\nplug in allele freq from annotation file\ncalculate LODs for different population"
+  },
+  {
+    "objectID": "weekly.html#section-3",
+    "href": "weekly.html#section-3",
+    "title": "Weekly Discussion",
+    "section": "04/13/2022",
+    "text": "04/13/2022\n\nFormat CHP output for runPM\nTest runPM\nlinkage heterogeneity\n\nThe number of significant variants increases.\n\nlinkage analysis without haplotype imputation"
+  },
+  {
+    "objectID": "weekly.html#section-4",
+    "href": "weekly.html#section-4",
+    "title": "Weekly Discussion",
+    "section": "04/06/2022",
+    "text": "04/06/2022\n\nFormat CHP output for runPM\nTest runPM\nMaximize the likelihood using grid search method\nRun linakge analysis of common variants on all chromosomes"
+  },
+  {
+    "objectID": "weekly.html#section-5",
+    "href": "weekly.html#section-5",
+    "title": "Weekly Discussion",
+    "section": "03/30/2022",
+    "text": "03/30/2022\n\nMaximize the likelihood using grid search method\nRun linakge analysis of common variants on all chromosomes\nCheck recombination on gene TPTEP1\n\nSome thoughts to reduce recombination 1. filter common variants before phasing 2. filter variants only occurred once in a family (singleton) before phasing 3. remove families with recombination more than 3\n\nTPTEP1\n\n989 family: 31 -> 19 -> 3\n<3 recombination 0.49 -> 0.82\n\n\nQ: recombination and CHP markers (pseudomarker calculates the likelihood of a marker from all the data joinly)\n- using recombination pattern accross all families"
+  },
+  {
+    "objectID": "weekly.html#section-6",
+    "href": "weekly.html#section-6",
+    "title": "Weekly Discussion",
+    "section": "03/23/2022",
+    "text": "03/23/2022\n\nBuild seqlink and paramlink2 sos pipeline for linkage analysis\nRun linakge analysis on all chromosomes\n\nthe results are promising (maybe still need to control type I errors)\nmost of the significant variants (LOD>3) are rare variants.\nUsing pseudomarker to do further analysis for variants with lod>3?(twostage.py)\nVerify results by previous studies (A list of genes or variants?)\n\nCreate pseudomarker input and test pseudomarker\n\ncannot handle mendelian errors in CHP markers (https://github.com/gaow/SEQLinkage/issues/41) The reason is that recombination is setted as False to generate CHP markers.\nabout 5 min per variant\n\n\nQ:\nrecombination and CHP markers (pseudomarker calculates the likelihood of a marker from all the data joinly)"
+  },
+  {
+    "objectID": "weekly.html#section-7",
+    "href": "weekly.html#section-7",
+    "title": "Weekly Discussion",
+    "section": "03/16/2022",
+    "text": "03/16/2022\n\nUpdate multiprocessing to output the intermediate data\n\nqsub task killed (too many jobs or not enough memory?)\n\nBuild rpy2 pipeline for linkage analysis\nRun linakge analysis on chromosomes\nRemove unused parameters and codes in cstatgen.\n\n=== - Fimpute https://animalbiosciences.uoguelph.ca/~msargol/fimpute/\nQuestions: - Using sos to run seqlink - jobs - for_each - memory for each job or total\n\nlog odds pvalue distribution"
+  },
+  {
+    "objectID": "weekly.html#section-8",
+    "href": "weekly.html#section-8",
+    "title": "Weekly Discussion",
+    "section": "03/09/2022",
+    "text": "03/09/2022\nrun linkage analysis by paramlink2 on chr19 (APOE genes)\ncomparing lods under different dfreq and other model parameters (merlin model parameter AD 0.001 0.01,0.90,0.90 Dominant_Model)\ngenerate a pipeline to analysis multiple genes\n===\nplink vs plink2\ncommon variants"
+  },
+  {
+    "objectID": "weekly.html#section-9",
+    "href": "weekly.html#section-9",
+    "title": "Weekly Discussion",
+    "section": "03/03/2022",
+    "text": "03/03/2022\nmerlin model parameter AD 0.001 0.01,0.90,0.90 Dominant_Model - 1.Is it reasonable to use marker freq as the population frequency of the disease allele? - 2.How to integrate lods from different markers and in different families in the same gene? - 3.What is the cutoff of lod? Do we need to do adjust the threshold?\nWhy VCF QC is necessary? The variant number is kind of the same as Yu’s vcf.(need to do DP and GQ filtering) /mnt/mfs/statgen/alzheimers-family/normalized_bed The variants are too dense to use lander-green algorithm.\nThe vcf file I used only has GT information in it.\nHow the vcf I used is matched with Yu’s vcf?"
+  },
+  {
+    "objectID": "weekly.html#section-10",
+    "href": "weekly.html#section-10",
+    "title": "Weekly Discussion",
+    "section": "02/24/2022",
+    "text": "02/24/2022\n\nProgress\n\nSEQLinkage\nupdate multiple processing to speed up write linkage files 360 genes and 500 families using 10 hours to write as linkage (I/O bound problem)\nTake a look at Pseudomarker - https://www.jurgott.org/linkage/runPM.html - https://www.mv.helsinki.fi/home/tsjuntun/pseudomarker/download.html - https://www.ncbi.nlm.nih.gov/CBBresearch/Schaffer/fastlink.html\nOnly input and output file without run-linkage\n\n\nVCF_QC\nDouble check on the MAF being truly MAF\nRun VCF_QC under DP=2,\nsos run ./pipeline/VCF_QC.ipynb qc    \\\n--genoFile /home/yh3455/xqtl-pipeline/ADSP_WES_geno_list.txt    \\\n--dbsnp-variants /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/00-All.add_chr.variants.gz  \\\n--reference-genome /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/GRCh38_full_analysis_set_plus_decoy_hla.noALT_noHLA_noDecoy_ERCC.fasta   \\\n--DP-snp 2 --DP-indel 2 \\\n--cwd /home/yh3455/Github/linkage/SEQpy3/data/genotype_all_dp2 --container /home/yh3455/Github/xqtl-pipeline/container/sifs/bioinfo.sif -J 22 --numThreads 10 --mem 128\n\nCheck VCF QC http://mbontrager.org/blog/2016/08/17/Variant-Exploration\n\ntest on chr9 and chr22\nsos run ./pipeline/VCF_QC.ipynb qc    --genoFile /home/yh3455/Github/xqtl-pipeline/ADSP_WES_geno_list1.txt    --dbsnp-variants /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/00-All.add_chr.variants.gz  --reference-genome /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/GRCh38_full_analysis_set_plus_decoy_hla.noALT_noHLA_noDecoy_ERCC.fasta   --DP-snp 2 --DP-indel 2 --cwd /home/yh3455/Github/linkage/SEQpy3/data/genotype_all_dp2_test --container /home/yh3455/Github/xqtl-pipeline/container/sifs/bioinfo.sif -J 22 --numThreads 10 --mem 128\nremoving bcftools filter -i 'GT=\"hom\" | TYPE=\"snp\" & GT=\"het\" & (FORMAT/AD[*:1])/(FORMAT/AD[*:0] + FORMAT/AD[*:1]) >= ${AB_snp} | TYPE=\"indel\" & GT=\"het\" & (FORMAT/AD[*:1])/(FORMAT/AD[*:0] + FORMAT/AD[*:1]) >= ${AB_indel}' * 174325 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.leftnorm.filtered.vcf.gz\nremoving bcftools filter -i 'GT=\"hom\" | TYPE=\"snp\" & GT=\"het\" & (FORMAT/AD[*:1])/(FORMAT/AD[*:0] + FORMAT/AD[*:1]) >= ${AB_snp} | TYPE=\"indel\" & GT=\"het\" & (FORMAT/AD[*:1])/(FORMAT/AD[*:0] + FORMAT/AD[*:1]) >= ${AB_indel}' | \\  bcftools filter -i 'F_MISSING<${geno_filter} & HWE>${hwe_filter}' * 277375 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.leftnorm.filtered.vcf.gz #### Questions and Issues 1. What is the difference between merlin and mlink?"
+  },
+  {
+    "objectID": "weekly.html#section-11",
+    "href": "weekly.html#section-11",
+    "title": "Weekly Discussion",
+    "section": "02/17/2022",
+    "text": "02/17/2022\n\n1. The format of daily PR\n\nhttps://changebio.github.io/researchsummary/\n\n\n\n2. SEQLinkage\n\nProgress\n\nImplement get AF from annotation.\nFix maf bug by reverse genotype if maf > 0.5. A potential problem with calculating marker frequencies.\nFix output format and path bugs.\nUpdate the command line script.\nRunning likange analysis on chr22\n\n=== - Yu’s data. VCF_QC has been done. Telled her the path of the data * 170839 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.leftnorm.filtered.bim * 174326 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.leftnorm.filtered.vcf.gz * 368336 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.leftnorm.vcf.gz * 368318 gcad.qc.r2.wes.chr9.20504.GATK.2020.06.26.biallelic.genotypes.ALL.vcf.gz\nsos run ./pipeline/VCF_QC.ipynb qc    \\\n--genoFile /home/yh3455/xqtl-pipeline/ADSP_WES_geno_list     \\\n--dbsnp-variants /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/00-All.add_chr.variants.gz  \\\n--reference-genome /mnt/mfs/statgen/snuc_pseudo_bulk/data/reference_data/GRCh38_full_analysis_set_plus_decoy_hla.noALT_noHLA_noDecoy_ERCC.fasta   \\\n--cwd /home/yh3455/Github/linkage/SEQpy3/data/genotype_all --container /home/yh3455/Github/xqtl-pipeline/container/sifs/bioinfo.sif -J 22 --numThreads 10 --mem 128\n\n\nQuestions and Issues\n\n1.the vcf file and the annotation file don’t match. Can we get the variant id by VCFstream? > add a get variant id function in cstatgen > https://github.com/statgenetics/cstatgen/blob/d51a06c18cd340fafe31e9b915ef9a2e49b55987/src/umich/vcf/VcfRecord.h\n2.missing freq or 0 freq are assigned a MAF of (1-k)/2n. k is the fraction of singletons observed (need clarify). https://www.sciencedirect.com/science/article/pii/S0002929719303453 > add a new argument to deal with missing or 0 freq. default is to remove them. user can set an assigned MAF.\n3.Do we need to do VCF QC for the family data? > * == further discussion is needed == *\n4.Is the line to normalize allele freq to 1?\n\n\n\n\nScreen Shot 2022-02-17 at 11.32.19 AM.png"
+  },
+  {
+    "objectID": "ldtools.html",
+    "href": "ldtools.html",
+    "title": "Summary of LDtools",
+    "section": "",
+    "text": "It is non-trivial to handle all these data merger and region extraction etc for integrative analysis. I would like to revisit and extend LDtools as a utility package to handle summary stats data in the context of data integration – including fine-mapping, LDSC, PRS, TWAS.\n\n\n\nLDtools developed by @changebio for our analysis pipelines. Polyfun software has some utility functions to compute LD by chunks, with PLINK input format https://github.com/omerwe/polyfun/blob/master/finemapper.py#L476 as well as with bgen format in which case ldstore is used https://github.com/omerwe/polyfun/blob/master/finemapper.py#L385 bigsnpr::snp_match https://rdrr.io/github/MichelNivard/GenomicSEM/man/sumstats.html https://github.com/precimed/python_convert https://github.com/matthijsz/pysumstats https://bioconductor.riken.jp/packages/3.14/bioc/vignettes/MungeSumstats/inst/doc/MungeSumstats.html Google search sumstats or gwas summary statistics there are various repos on github As a user, I would rather use ldsc code than LDtools because at least they are better tested (by application to multiple papers and dataset). I wish LDtools had used some of these code so we don’t reinvent the wheel. However, what polyfun/ldsc has is not good enough.\nAlso, survey each application fine-mapping, LDSC, PRS, TWAS and comment on how they handle the issue.\n\n\n\nLet’s take a look at polyfun/ldsc and other related codes, and rework LDtools if their implementation is better. LDtools also contains many other features. Here is the scope of the proposed extended tool:\nSupport VCF summary statistics format: convert and combine summary stats in VCF format (possibly through rpy2 to the gwas_vcf R package) Merge summary stats and make sign flips deserves a comprehensive discussion Compute LD for given region, adjusting for covariates and GRM ; need to support VCF, bgen and plink Built-in liftover for summary stats or LD index Other data integration utility features we use repeatedly in xqtl-pipeline, as we move forward with the analysis"
+  },
+  {
+    "objectID": "ldtools.html#working-on",
+    "href": "ldtools.html#working-on",
+    "title": "Summary of LDtools",
+    "section": "1. Working on",
+    "text": "1. Working on"
+  },
+  {
+    "objectID": "ldtools.html#issues",
+    "href": "ldtools.html#issues",
+    "title": "Summary of LDtools",
+    "section": "2. Issues",
+    "text": "2. Issues"
+  },
+  {
+    "objectID": "ldtools.html#done",
+    "href": "ldtools.html#done",
+    "title": "Summary of LDtools",
+    "section": "3. Done",
+    "text": "3. Done"
+  },
+  {
+    "objectID": "containerization_hpc.html",
+    "href": "containerization_hpc.html",
+    "title": "Docker and Singularity",
+    "section": "",
+    "text": "docker pull statisticalgenetics/rvnpl\ndocker run -p 8888:8888 -v $(pwd)/Github:/home –name linkage -it statisticalgenetics/rvnpl\n\n\n\npip install jupyterlab\ncd home/\njupyter notebook –no-browser –port=8888 –ip=‘0.0.0.0’ –allow-root >>> http://127.0.0.1:8888/?token=7c88726789171627bd7144cc97c875f4d9ab2cece58a968e\n\n\n\ndocker container start linkage docker exec -it linkage /bin/bash cd home/ jupyter-lab –no-browser –port=8888 –ip=‘0.0.0.0’ –allow-root\nhttp://127.0.0.1:8888/lab\n\n\n\nimage(the original system) >>> container running an image to a container docker run -p 8888:8888 -v $(pwd)/Github:/home –name linkage -it statisticalgenetics/rvnpl ///docker run [options] image_name ///docker images >>> check available images\ncontainer options docker container ls docker container kill docker container logs docker container rename docker container restart docker container rm docker container run docker container start docker container stats docker container stop\nEntering the Docker container and using bash $ docker exec -it  /bin/bash\nremove images and container $ docker rmi -f  $ docker rm \n\n\n\n\n\npip install conda-pack\nconda create -n rvnpl_env –clone base conda pack -n rvnpl_env /get a rvnpl_env.tar.gz cp /usr/lib/x86_64-linux-gnu/libboost_python-py27.* /home/rvnpl_packs/ /after unpacking, running rvnpl meet a error:ImportError: libboost_python-py27.so.1.55.0: cannot open shared object file: No such file or directory\n\n\n\ncd miniconda3/envs mkdir rvnpl_env tar -xzf ~/rvnpl_env.tar.gz -C rvnpl_env conda-unpack mv libboost_python-py27.so.1.55.0 miniconda3/envs/rvnpl_env/lib/\nrvnpl examples work.\ncd example rvnpl collapse –fam 100extend_01.ped –vcf A1BG/rep1.vcf.gz –output ./rep1 –freq EVSMAF -c 0.01 –rvhaplo –include_vars A1BG.txt OR (for families with quantitative traits) rvnpl collapse –fam 100extend_quant.ped –vcf A1BG/rep1.vcf.gz –output ./rep1 –freq EVSMAF -c 0.01 –rvhaplo –include_vars A1BG.txt\nseqlink exampl doesn’t work\nseqlink –fam seqlinkage-example.fam –vcf seqlinkage-example.vcf.gz -f MERLIN\nconda create -n cstatgenpy3 python=3.8 conda activate cstatgenpy3 conda install -c anaconda swig conda install -c psi4 gcc-5 pip install egglib\ncp /home/yh3455/miniconda3/envs/seqlink_cs100/lib/libm.so ~/miniconda3/envs/cstatgenpy3/lib/ cp /home/yh3455/miniconda3/envs/seqlink_cs100/lib/libc.so ~/miniconda3/envs/cstatgenpy3/lib/ cp /home/yh3455/miniconda3/envs/seqlink_cs100/lib/libpthread.so ~/miniconda3/envs/cstatgenpy3/lib/\ncd ~/Github/cstatgen python setup.py install\n\n\n\n\nsingularity shell container/sifs/bioinfo.sif\nhttps://sylabs.io/guides/3.0/user-guide/running_services.html\n\n\nmodule load Singularity\nsingularity remote login\n> enter your token\nsingularity build --remote lmm.sif docker://statisticalgenetics/lmm:3.0\n\n\n\n\nUsing docker https://docs.docker.com/engine/reference/commandline/docker/ >>> docker https://docs.docker.com/engine/reference/commandline/container/ >>> container\nJupyter in container https://towardsdatascience.com/how-to-run-jupyter-notebook-on-docker-7c9748ed209f *** Basic operations https://jupyter-docker-stacks.readthedocs.io/en/latest/ https://github.com/jupyter/docker-stacks/blob/master/base-notebook/jupyter_notebook_config.py >>> c.NotebookApp.ip = “0.0.0.0” >>> fixed the problem to open jupyter on local computer. https://stackoverflow.com/questions/25366106/anaconda-ipython-notebook-not-starting-in-server-setup https://stackoverflow.com/questions/43692961/how-to-get-ip-address-of-running-docker-container/47226863\nRunning Jupyter Notebook on a remote server https://docs.anaconda.com/anaconda/user-guide/tasks/remote-jupyter-notebook/\nConda-Pack https://conda.github.io/conda-pack/"
+  },
+  {
+    "objectID": "linkage.html",
+    "href": "linkage.html",
+    "title": "Summary of SEQLinkage",
+    "section": "",
+    "text": "Phasing haplotypes in gene regions\nlinkage analysis of all variants\nlinkage analysis of CHP markers\nnon-parametic analysis"
+  },
+  {
+    "objectID": "linkage.html#working-on",
+    "href": "linkage.html#working-on",
+    "title": "Summary of SEQLinkage",
+    "section": "1. Working on",
+    "text": "1. Working on\n\nlinkage analysis of all variants\n\nsos run nbs/seqlink_sos.ipynb linkage --cwd data/wg20220316 --fam_path data/new_trim_ped_famless17_no:xx.fam\n\nlinkage analysis of CHP markers"
+  },
+  {
+    "objectID": "linkage.html#done",
+    "href": "linkage.html#done",
+    "title": "Summary of SEQLinkage",
+    "section": "2. Done",
+    "text": "2. Done\n\nPhasing haplotypes in gene regions\n\nsos run nbs/seqlink_sos.ipynb seqlink --cwd data/wg20220316 --fam_path data/new_trim_ped_famless17_no:xx.fam --vcf_path /mnt/mfs/statgen/alzheimers-family/linkage_files/geno/full_sample/vcf/full_sample.vcf.gz --anno_path MWE/annotation --pop_path data/full_sample_fam_pop.txt"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Summary of my research projects",
+    "section": "",
+    "text": "SEQLinkage\n\n\nhttps://github.com/changebio/SEQLinkage\n\n\nCstatgen\n\n\nhttps://github.com/changebio/cstatgen\n\n\nLDtools\n\n\nhttps://github.com/changebio/LDtools\nhttps://github.com/changebio/bioworkflows\nhttps://github.com/changebio/bioworkflows\n\n\nAlzheimers-family\n\n\nhttps://github.com/changebio/alzheimers-family"
+  },
+  {
+    "objectID": "conda_envs.html",
+    "href": "conda_envs.html",
+    "title": "Conda envs",
+    "section": "",
+    "text": "conda create -n seqpy3base\nconda install -c conda-forge xeus-cling\nconda install python\nconda install -c anaconda swig \nconda install -c conda-forge nodejs\nconda install -c conda-forge gh\npip install nbdev jupyter_contrib_nbextensions notebook jupyterlab pandas numpy scipy scikit-learn matplotlib aquirdturtle_collapsible_headings\ncd ~/Github/linkage/cstatgen/\npython setup.py install\n\n\nconda create -n seqpy3v0 -c seqpy3base\npip install EggLib"
+  },
+  {
+    "objectID": "conda_envs.html#seqlinakge-rpy2-env",
+    "href": "conda_envs.html#seqlinakge-rpy2-env",
+    "title": "Conda envs",
+    "section": "SEQLinakge rpy2 env",
+    "text": "SEQLinakge rpy2 env\nconda create -n rpy2 -c conda-forge r-essentials r-base\nconda install -c anaconda swig \nconda install -c conda-forge nodejs\nconda install -c conda-forge gh\npip install nbdev jupyter_contrib_nbextensions notebook jupyterlab pandas numpy scipy scikit-learn matplotlib aquirdturtle_collapsible_headings\npip install EggLib\npip install rpy2\ncd ~/Github/linkage/cstatgen/\npython setup.py install"
+  },
+  {
+    "objectID": "conda_envs.html#bioconda-bioc-env",
+    "href": "conda_envs.html#bioconda-bioc-env",
+    "title": "Conda envs",
+    "section": "Bioconda bioc env",
+    "text": "Bioconda bioc env\nconda create -n rpy2 -c conda-forge r-essentials r-base\nconda install -c anaconda swig\n\nconda install -c bioconda eagle\nconda install -c bioconda beagle\nconda install -c bioconda bcftools\nconda install -c bioconda merlin\n\nconda install -c conda-forge nodejs\nconda install -c conda-forge gh\npip install nbdev jupyter_contrib_nbextensions notebook jupyterlab pandas numpy scipy scikit-learn matplotlib aquirdturtle_collapsible_headings\npip install EggLib\npip install rpy2\ncd ~/Github/linkage/cstatgen/\npython setup.py install"
+  }
+]

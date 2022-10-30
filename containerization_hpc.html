@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Reproducible development environment">
+
+<title>researchsummary - Docker and Singularity</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="researchsummary - Docker and Singularity">
+<meta property="og:description" content="Reproducible development environment">
+<meta property="og:site-name" content="researchsummary">
+<meta name="twitter:title" content="researchsummary - Docker and Singularity">
+<meta name="twitter:description" content="Reproducible development environment">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">researchsummary</span>
+    </a>
+  </div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Docker and Singularity</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Summary of my research projects</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./weekly.html" class="sidebar-item-text sidebar-link">Weekly Discussion</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linkage.html" class="sidebar-item-text sidebar-link">Summary of SEQLinkage</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ldtools.html" class="sidebar-item-text sidebar-link">Summary of LDtools</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conda_envs.html" class="sidebar-item-text sidebar-link">Conda envs</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./containerization_hpc.html" class="sidebar-item-text sidebar-link active">Docker and Singularity</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#linkage-init-env" id="toc-linkage-init-env" class="nav-link active" data-scroll-target="#linkage-init-env">Linkage init env</a>
+  <ul class="collapse">
+  <li><a href="#in-local-terminal" id="toc-in-local-terminal" class="nav-link" data-scroll-target="#in-local-terminal">1. In local terminal</a></li>
+  <li><a href="#in-linkage-container-terminal" id="toc-in-linkage-container-terminal" class="nav-link" data-scroll-target="#in-linkage-container-terminal">2. In linkage container terminal</a></li>
+  <li><a href="#quick-access" id="toc-quick-access" class="nav-link" data-scroll-target="#quick-access">Quick access</a></li>
+  <li><a href="#docker-usage" id="toc-docker-usage" class="nav-link" data-scroll-target="#docker-usage">Docker usage</a></li>
+  <li><a href="#packaging-conda-env" id="toc-packaging-conda-env" class="nav-link" data-scroll-target="#packaging-conda-env">Packaging conda env</a>
+  <ul class="collapse">
+  <li><a href="#in-rvnpl-docker" id="toc-in-rvnpl-docker" class="nav-link" data-scroll-target="#in-rvnpl-docker">in rvnpl docker</a></li>
+  <li><a href="#in-csg-cluster" id="toc-in-csg-cluster" class="nav-link" data-scroll-target="#in-csg-cluster">in csg cluster</a></li>
+  </ul></li>
+  <li><a href="#singularity" id="toc-singularity" class="nav-link" data-scroll-target="#singularity">Singularity</a>
+  <ul class="collapse">
+  <li><a href="#singularity-pull-docker-image" id="toc-singularity-pull-docker-image" class="nav-link" data-scroll-target="#singularity-pull-docker-image">Singularity pull docker image</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/changebio/researchsummary/tree/main/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Docker and Singularity</h1>
+</div>
+
+<div>
+  <div class="description">
+    Reproducible development environment
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+<section id="linkage-init-env" class="level1">
+<h1>Linkage init env</h1>
+<section id="in-local-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="in-local-terminal">1. In local terminal</h3>
+<p>docker pull statisticalgenetics/rvnpl</p>
+<p>docker run -p 8888:8888 -v $(pwd)/Github:/home –name linkage -it statisticalgenetics/rvnpl</p>
+</section>
+<section id="in-linkage-container-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="in-linkage-container-terminal">2. In linkage container terminal</h3>
+<p>pip install jupyterlab</p>
+<p>cd home/</p>
+<p>jupyter notebook –no-browser –port=8888 –ip=‘0.0.0.0’ –allow-root &gt;&gt;&gt; http://127.0.0.1:8888/?token=7c88726789171627bd7144cc97c875f4d9ab2cece58a968e</p>
+</section>
+<section id="quick-access" class="level2">
+<h2 class="anchored" data-anchor-id="quick-access">Quick access</h2>
+<p>docker container start linkage docker exec -it linkage /bin/bash cd home/ jupyter-lab –no-browser –port=8888 –ip=‘0.0.0.0’ –allow-root</p>
+<p>http://127.0.0.1:8888/lab</p>
+</section>
+<section id="docker-usage" class="level2">
+<h2 class="anchored" data-anchor-id="docker-usage">Docker usage</h2>
+<p>image(the original system) &gt;&gt;&gt; container running an image to a container docker run -p 8888:8888 -v $(pwd)/Github:/home –name linkage -it statisticalgenetics/rvnpl ///docker run [options] image_name ///docker images &gt;&gt;&gt; check available images</p>
+<p>container options docker container ls docker container kill docker container logs docker container rename docker container restart docker container rm docker container run docker container start docker container stats docker container stop</p>
+<p>Entering the Docker container and using bash $ docker exec -it <container_id or="" name=""> /bin/bash</container_id></p>
+<p>remove images and container $ docker rmi -f <image-id> $ docker rm <container-id></container-id></image-id></p>
+</section>
+<section id="packaging-conda-env" class="level2">
+<h2 class="anchored" data-anchor-id="packaging-conda-env">Packaging conda env</h2>
+<section id="in-rvnpl-docker" class="level3">
+<h3 class="anchored" data-anchor-id="in-rvnpl-docker">in rvnpl docker</h3>
+<p>pip install conda-pack</p>
+<p>conda create -n rvnpl_env –clone base conda pack -n rvnpl_env /get a rvnpl_env.tar.gz cp /usr/lib/x86_64-linux-gnu/libboost_python-py27.* /home/rvnpl_packs/ /after unpacking, running rvnpl meet a error:ImportError: libboost_python-py27.so.1.55.0: cannot open shared object file: No such file or directory</p>
+</section>
+<section id="in-csg-cluster" class="level3">
+<h3 class="anchored" data-anchor-id="in-csg-cluster">in csg cluster</h3>
+<p>cd miniconda3/envs mkdir rvnpl_env tar -xzf ~/rvnpl_env.tar.gz -C rvnpl_env conda-unpack mv libboost_python-py27.so.1.55.0 miniconda3/envs/rvnpl_env/lib/</p>
+<p>rvnpl examples work.</p>
+<p>cd example rvnpl collapse –fam 100extend_01.ped –vcf A1BG/rep1.vcf.gz –output ./rep1 –freq EVSMAF -c 0.01 –rvhaplo –include_vars A1BG.txt OR (for families with quantitative traits) rvnpl collapse –fam 100extend_quant.ped –vcf A1BG/rep1.vcf.gz –output ./rep1 –freq EVSMAF -c 0.01 –rvhaplo –include_vars A1BG.txt</p>
+<p>seqlink exampl doesn’t work</p>
+<p>seqlink –fam seqlinkage-example.fam –vcf seqlinkage-example.vcf.gz -f MERLIN</p>
+<p>conda create -n cstatgenpy3 python=3.8 conda activate cstatgenpy3 conda install -c anaconda swig conda install -c psi4 gcc-5 pip install egglib</p>
+<p>cp /home/yh3455/miniconda3/envs/seqlink_cs100/lib/libm.so ~/miniconda3/envs/cstatgenpy3/lib/ cp /home/yh3455/miniconda3/envs/seqlink_cs100/lib/libc.so ~/miniconda3/envs/cstatgenpy3/lib/ cp /home/yh3455/miniconda3/envs/seqlink_cs100/lib/libpthread.so ~/miniconda3/envs/cstatgenpy3/lib/</p>
+<p>cd ~/Github/cstatgen python setup.py install</p>
+</section>
+</section>
+<section id="singularity" class="level2">
+<h2 class="anchored" data-anchor-id="singularity">Singularity</h2>
+<p>singularity shell container/sifs/bioinfo.sif</p>
+<p>https://sylabs.io/guides/3.0/user-guide/running_services.html</p>
+<section id="singularity-pull-docker-image" class="level3">
+<h3 class="anchored" data-anchor-id="singularity-pull-docker-image">Singularity pull docker image</h3>
+<pre><code>module load Singularity
+singularity remote login
+&gt; enter your token
+singularity build --remote lmm.sif docker://statisticalgenetics/lmm:3.0</code></pre>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Using docker https://docs.docker.com/engine/reference/commandline/docker/ &gt;&gt;&gt; docker https://docs.docker.com/engine/reference/commandline/container/ &gt;&gt;&gt; container</p>
+<p>Jupyter in container https://towardsdatascience.com/how-to-run-jupyter-notebook-on-docker-7c9748ed209f *** Basic operations https://jupyter-docker-stacks.readthedocs.io/en/latest/ https://github.com/jupyter/docker-stacks/blob/master/base-notebook/jupyter_notebook_config.py &gt;&gt;&gt; c.NotebookApp.ip = “0.0.0.0” &gt;&gt;&gt; fixed the problem to open jupyter on local computer. https://stackoverflow.com/questions/25366106/anaconda-ipython-notebook-not-starting-in-server-setup https://stackoverflow.com/questions/43692961/how-to-get-ip-address-of-running-docker-container/47226863</p>
+<p>Running Jupyter Notebook on a remote server https://docs.anaconda.com/anaconda/user-guide/tasks/remote-jupyter-notebook/</p>
+<p>Conda-Pack https://conda.github.io/conda-pack/</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
